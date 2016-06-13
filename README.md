@@ -1,2 +1,4 @@
-# scripts
-scripts to monitor memory
+ReadMe:
+
+Install bc and mutt using yum when executing the script (memory_check.sh)
+
