@@ -11,8 +11,7 @@ echo -n " Option: ";
 read Option;
         if [ "$Option" == "0" ]; then
                 if [ "$memory" -lt "${w}" ]; then
-                         subj=$(date +"%Y%m%d %H:%M Memory Check-Critical");proc=$( ps aux --sort=-%mem | awk 'NR<=11{printf "\n%s\t%s\t%s\t%s\t%s\t%s\t%s",$1,$2,$3,$4,$5,$6,$11}');echo -e "Good day! Hi All, \n\nPlease see top 10 Process Running on this system. \nCurrent Memory usage is $memory% \n\n$proc \n\nThanks." > /root/scripts/usage.txt | mutt -s "$subj" -i  /root/scripts/usage.txt ${e} < /dev/null;
-                        exit 0;
+                         exit 0;
                 else
                         clear;
                         echo -e "\n*****Condition not Meet******";
